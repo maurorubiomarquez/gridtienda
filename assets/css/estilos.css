@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas:
+    'encabezado encabezado'
+    'menu galeria'
+    'pie pie' ;
+}
+
+header {
+    background-color:blue; 
+    grid-area: encabezado;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    background-color: #cdcdcd;
+    grid-area: galeria;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+.card h1 {
+    color: blue;
+}
+.btn-comprar {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+.btn-precio {
+    background-color: grey;
+    color: beige;
+    margin-top: 10px;
+    width: 50%;
+}
+main {
+    background-color: greenyellow;
+    grid-area: menu;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.categoria span {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .opciones {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left:3ch;
+  }
+  
+  .opciones li {
+    margin-bottom: 10px;
+  }
+  
+  .opciones a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .opciones a:hover {
+    color: #ccc;
+  }
+
+footer {
+    background-color: green;
+    grid-area: pie;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
